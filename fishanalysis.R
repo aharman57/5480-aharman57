@@ -1,5 +1,5 @@
 #reading in .csv data
-fish_data <- read.csv(file="data/Gaeta_etal_CLC_data.csv", header = T)
+fish_data <- read.csv(file="data/Gaeta_etal_CLC_data_1.csv", header = T)
 
 library(dplyr)
 
