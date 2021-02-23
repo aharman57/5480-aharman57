@@ -42,3 +42,10 @@ lotr_tidy %>%
 lotr_tidy %>% 
   unite(Race_Gender, Race, Gender) %>% 
   spread(key = Race_Gender, value = Words)
+
+## pivot_wider()
+
+lotr_untidy_pivot <- lotr_tidy %>%
+  pivot_wider(names_from = Gender, values_from = Words)
+
+write_csv(lotr_untidy_pivot, file = file.path("data", "lotr_untidy_pivot.csv"))
