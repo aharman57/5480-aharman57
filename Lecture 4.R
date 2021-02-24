@@ -103,3 +103,14 @@ surveys_pipe_5 <- surveys %>%
   summarize(avg_weight = mean(weight, na.rm = T))
 
 view(surveys_pipe_5)
+
+## Extra ##
+
+filter(surveys, species_id == "DS", year > 1995)
+
+filter(surveys, species_id == "DS" | species_id == "DM" | species_id == "DO")
+
+species_weights <- surveys %>%
+  group_by(species) %>%
+  filter(n() > 100) %>%
+  summarize(avg_weight = mean(weight, na.rm = TRUE))
