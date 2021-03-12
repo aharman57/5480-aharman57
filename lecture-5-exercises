@@ -1,0 +1,8 @@
+Question #1
+The aiports dataframe contains the destination and origin (lat/long) of the flights, which would allow me to draw a line between these two points. The weather dataset would be required to draw a more exact line, as wind patterns can alter flight plans. The planes dataset would not be required as the model of plane (probably?) won't change the flight path. 
+
+Question #2
+The origin variable is linked between airports and weather, as the weather is happening at a specific location. The three digit code  for the airport is in the weather tibble, and is required to find the actual location the weather is occurring. Weather is only available for the origin (which is always in NYC). 
+
+Question #3
+It would also then correspond to the destination variable (dest) in the flights tibble. This is assuming that all destinations are within the USA. 
